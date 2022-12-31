@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Show Data</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+    <table id="example" class="display" style="width:100%">
+        <div align="right">
+            <a class="btn btn-secondary" href="/Reserve">ย้อนกลับ</a>
+        </div>
+
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% datatabelid.forEach(function(item) { %>
+                <tr>
+                    <td>
+                        <%= item.No %>
+                    </td>
+                    <td>
+                        <%= item.Name %>
+                    </td>
+                    <td>
+                        <%= item.Status %>
+                    </td>
+                    <td>
+                        <%= item.Fname %>
+                    </td>
+                    <td>
+                        <%= item.Lname %>
+                    </td>
+                    <td>
+                        <%= item.Phone %>
+                    </td>
+                </tr>
+                <%  }); %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Phone</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    });
+</script>
+
+</html>
