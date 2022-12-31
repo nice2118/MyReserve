@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.0
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Dec 31, 2022 at 03:51 PM
+- Server version: 10.1.31-MariaDB
+- PHP Version: 7.2.4
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="myreserve" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="reserve">
+                CREATE TABLE `reserve` (
+                  `No` int(11) NOT NULL AUTO_INCREMENT,
+                  `UserNo` int(11) NOT NULL,
+                  `SeatNo` int(11) NOT NULL,
+                  PRIMARY KEY (`No`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="seat">
+                CREATE TABLE `seat` (
+                  `No` int(11) NOT NULL,
+                  `Name` varchar(50) NOT NULL,
+                  `Status` enum('Free','Reserve','Full') NOT NULL DEFAULT 'Free',
+                  PRIMARY KEY (`No`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `No` int(11) NOT NULL AUTO_INCREMENT,
+                  `Fname` varchar(50) NOT NULL,
+                  `Lname` varchar(50) NOT NULL,
+                  `Phone` varchar(20) NOT NULL,
+                  `User` varchar(100) DEFAULT NULL,
+                  `Password` varchar(100) NOT NULL,
+                  `Status` enum('User','Admin') NOT NULL DEFAULT 'User',
+                  PRIMARY KEY (`No`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'myreserve'
+    -->
+    <database name="myreserve">
+        <!-- Table reserve -->
+        <table name="reserve">
+            <column name="No">1</column>
+            <column name="UserNo">1</column>
+            <column name="SeatNo">12</column>
+        </table>
+        <table name="reserve">
+            <column name="No">2</column>
+            <column name="UserNo">2</column>
+            <column name="SeatNo">9</column>
+        </table>
+        <table name="reserve">
+            <column name="No">4</column>
+            <column name="UserNo">3</column>
+            <column name="SeatNo">8</column>
+        </table>
+        <!-- Table seat -->
+        <table name="seat">
+            <column name="No">1</column>
+            <column name="Name">ตัวที่1</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">2</column>
+            <column name="Name">ตัวที่2</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">3</column>
+            <column name="Name">ตัวที่3</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">4</column>
+            <column name="Name">ตัวที่4</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">5</column>
+            <column name="Name">ตัวที่5</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">6</column>
+            <column name="Name">ตัวที่6</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">7</column>
+            <column name="Name">ตัวที่7</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">8</column>
+            <column name="Name">ตัวที่8</column>
+            <column name="Status">Reserve</column>
+        </table>
+        <table name="seat">
+            <column name="No">9</column>
+            <column name="Name">ตัวที่9</column>
+            <column name="Status">Full</column>
+        </table>
+        <table name="seat">
+            <column name="No">10</column>
+            <column name="Name">ตัวที่10</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">11</column>
+            <column name="Name">ตัวที่11</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">12</column>
+            <column name="Name">ตัวที่12</column>
+            <column name="Status">Reserve</column>
+        </table>
+        <table name="seat">
+            <column name="No">13</column>
+            <column name="Name">ตัวที่13</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">14</column>
+            <column name="Name">ตัวที่14</column>
+            <column name="Status">Reserve</column>
+        </table>
+        <table name="seat">
+            <column name="No">15</column>
+            <column name="Name">ตัวที่15</column>
+            <column name="Status">Free</column>
+        </table>
+        <table name="seat">
+            <column name="No">16</column>
+            <column name="Name">ตัวที่16</column>
+            <column name="Status">Free</column>
+        </table>
+        <!-- Table user -->
+        <table name="user">
+            <column name="No">1</column>
+            <column name="Fname">admin</column>
+            <column name="Lname">istrator</column>
+            <column name="Phone">0600000000</column>
+            <column name="User">admin</column>
+            <column name="Password">admin</column>
+            <column name="Status">Admin</column>
+        </table>
+        <table name="user">
+            <column name="No">2</column>
+            <column name="Fname">a</column>
+            <column name="Lname">a</column>
+            <column name="Phone">123456</column>
+            <column name="User">a</column>
+            <column name="Password">a</column>
+            <column name="Status">User</column>
+        </table>
+        <table name="user">
+            <column name="No">3</column>
+            <column name="Fname">b</column>
+            <column name="Lname">b</column>
+            <column name="Phone">66</column>
+            <column name="User">b</column>
+            <column name="Password">b</column>
+            <column name="Status">User</column>
+        </table>
+    </database>
+</pma_xml_export>
