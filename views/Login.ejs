@@ -2,26 +2,40 @@
 <html>
 
 <head>
-    <title>จัดการ</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body class="p-3 m-0 border-0 bd-example">
     <div class="dropdown-menu">
-        <form class="px-4 py-3">
+        <form class="px-4 py-3" id="Login" name="Login" method="post">
             <div class="mb-3">
-                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                <label for="User" class="form-label">Email address</label>
+                <input type="User" class="form-control" id="User" placeholder="User" name="User">
             </div>
             <div class="mb-3">
-                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" placeholder="Password" name="Password">
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">New around here? Sign up</a>
+        <a class="dropdown-item" href="/Register">Register</a>
     </div>
 </body>
+<% if(A == '1') { %>
+    <script>
+        alert("รหัสผ่านไม่ถูกต้อง");
+    </script>
+    <% } %>
+        <% if(A == '2') { %>
+            <script>
+                alert("กรุณากรอกรหัสผ่าน");
+            </script>
+            <% } %>
 
 </html>
